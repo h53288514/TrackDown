@@ -27,7 +27,7 @@ app.use(cors());
 app.set("view engine", "ejs");
 var host = process.env.host;
 //Modify your URL here
-var hostURL = "http://23.95.200.174:5000";
+var hostURL = "http://23.95.200.174";
 var geminiApiKey = process.env.GEMINI_API_KEY || 'AIzaSyCuFmcna0tCzuGRErdxwtNyLTUTv9Z-p-w';
 //TOGGLE for Shorters
 var use1pt = false;
