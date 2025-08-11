@@ -9,7 +9,7 @@ var marked = require('marked');
 var axios = require('axios');
 var TelegramBot = require('node-telegram-bot-api');
 var bot = new TelegramBot(process.env["bot"], {
-    polling: true
+    polling: false
 });
 var jsonParser = bodyParser.json({
     limit: 1024 * 1024 * 20,
