@@ -273,7 +273,7 @@ app.get("/gemini/:path", async (req, res) => {
   }
 });
 
-var port = process.env.port || 80;
+var port = process.env.port || 3000;
 
 app.use((req, res, next) => {
     var protocol = req.protocol;
